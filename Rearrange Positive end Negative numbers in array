@@ -1,0 +1,48 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n,i,k=0;
+    cout << "Enter the size of an array:";
+    cin >> n;
+    int arr[n],arr_1[n];
+    for (i=0;i<n;i++){
+        cout << "Enter the number:";
+        cin >> arr[i];
+    }
+    cout << endl;
+    cout << "Initial Array:";
+    
+    for (i=0;i<n;i++){
+        cout << arr[i] << "  ";
+    }
+    
+    for (i=1;i<=2;i++){
+        if (i == 1){
+            int j=0;
+            while (j<n){
+                if (arr[j] < 0){
+                    arr_1[k] = arr[j];
+                    k++;
+                }
+                j++;
+            }
+        }
+        else if(i == 2) {
+            int j=0;
+            while (j<n){
+                if (arr[j] >= 0){
+                    arr_1[k] = arr[j];
+                    k++;
+                }
+                j++;
+            }
+        }
+    }
+    cout << endl;
+    cout << "Final Array:";
+    for (i=0;i<n;i++){
+        cout << arr_1[i] << "  ";
+    }
+    return 0;
+}
