@@ -1,0 +1,30 @@
+-- > This is from amazon and Orecal
+
+--> Code :
+    #include<iostream>
+    using namespace std;
+    
+    int main(){
+        int arr[] = {1,5,3,4,3,5,6};
+        const int N = 2e4;
+        int ref_arr[N];
+        for (int i=0;i<N;i++){
+            ref_arr[i] = -1;
+        }
+        int index;
+        for (int i=0;i<7;i++){
+            
+            if (ref_arr[arr[i]] == -1){
+                ref_arr[arr[i]] =  i;
+            }
+            
+            else {
+                index = ref_arr[arr[i]];
+                if ( ref_arr[arr[i]] < index && ref_arr[arr[i]] != -1 ){
+                    index = ref_arr[arr[i]];
+                }
+            }
+        }
+        cout << index;
+        return 0;
+    }
