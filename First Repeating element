@@ -28,3 +28,9 @@
         cout << index;
         return 0;
     }
+
+
+
+
+-->Output:   1
+
