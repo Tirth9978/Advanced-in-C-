@@ -35,5 +35,38 @@
                       cout << max_sum;
                       return 0;
                   }
---> Method 2(Cumulative sum approach):
---> Code : 
+--> Method 2(Cumulative sum approach): (-->>> Panding)
+            --> Code : 
+                        #include<iostream>
+                        #include <climits>           <-- New 
+                        
+                        using namespace std;
+                        
+                        int main(){
+                            int n;
+                            cout << "Entre the siz eof an array:";
+                            cin >>n;
+                            int arr[n];
+                            for (int i=0;i<n;i++){
+                                cout << "Entre the number:";
+                                cin >> arr[i];
+                            }
+                            int arr_1[n];
+                            arr_1[0] = 0;
+                            for (int i=0;i<n;i++){
+                                arr_1[i] = arr_1[i-1] + arr[i-1];
+                            }
+                            int max_sum = INT_MIN;
+                            for (int i=1;i<=n;i++){
+                                int sum = 0;
+                                for (int j=0;j<i;j++){
+                                    sum = arr_1[i]  -  arr_1[j];
+                                    // max_sum = max(sum,max_sum);   < -- solve
+                                    if (max_sum < sum){
+                                        max_sum  =  sum;
+                                    }
+                                }
+                            }
+                            cout << max_sum;
+                            return 0;
+                        }
