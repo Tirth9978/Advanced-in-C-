@@ -106,3 +106,33 @@
       1    2              1    2                            7      10
                   X                        ==>    
       3    4              3    4                            15      22
+
+***********************************************************************************************************************
+
+(4) Find the element in the array:
+  --> Code :
+    #include<iostream>
+    using namespace std;
+    
+    int main(){
+        int arr[4][4] = {{1,4,7,11},{2,5,8,12},{3,6,9,16},{10,13,14,17}};
+        int trage ;
+        cout << "Entre the trage:";
+        cin >> trage;
+        int r = 0;
+        int c = 3;
+        bool ans = false;
+        while (r<4 && c >=0 ){
+            if (arr[r][c] == trage){
+                ans = true ;
+            }
+            if (arr[r][c] > trage){
+                c--;
+            }
+            else {
+                r++;
+            }
+        }
+        cout << ans;
+        return 0;
+    }
