@@ -1,0 +1,31 @@
+(1) Cheak Palindrome 
+  -->              Reserve
+            NITIN ---------> NITIN (which is same!!) 
+  --> This is called Palindrome
+  --> Code :
+      #include<iostream>
+      using namespace std;
+      
+      int main(){
+          int n;
+          cout << "Entre the size of an charatar array:";
+          cin >> n;
+          char word[n+1];
+          cout << "Entre the word : ";
+          cin >> word ;
+          bool chake = true ;
+          for (int i=0;i<n;i++){
+              if (word[i] != word[n-i-1] ){
+                  chake = false ;
+              }
+              
+          }
+          if (chake == true ){
+              cout << "Yes";
+          }
+          else {
+              cout << "No";
+          }
+          
+          return 0;
+      }
