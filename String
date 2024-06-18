@@ -1,0 +1,39 @@
+(1) Change lower case to Upper case:-
+  --> Code : 
+      #include<iostream>
+      #include<string>
+      using namespace std;
+      
+      int main(){
+          string a = "Tirth is best";
+          for (int i=0;i<a.size();i++){
+              if ('a'<=a[i] && a[i] <='z'){                              <-- "&&" is main thing.We cannot write ('a'<= a[i] <= 'z')
+                  int x = a[i];
+                  x = x - 32;
+                  char ch = x;
+                  a[i] = ch;
+              }
+          }
+          cout << a;
+          return 0;
+      }
+***************************************************************************************************************************************************************************
+(2)Change Upper case to lower case:-
+  --> Code :
+      #include<iostream>
+      #include<string>
+      using namespace std;
+      
+      int main(){
+          string a = "uyweGFIYEGifegwfygeGEFIYg";
+          for (int i=0;i<a.size();i++){
+              if ('A' <=a[i] && a[i] <= 'Z'){
+                  int x = a[i];
+                  x = x+ 32;
+                  char ch = x;
+                  a[i] = ch;
+              }
+          }
+          cout << a;
+          return 0;
+      }
