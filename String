@@ -64,3 +64,62 @@
           cout << maxf<< " "<< ch;
           return 0;
       }
+
+***************************************************************************************************************************************************************************
+(4) Find numbers of vovel in string:-
+  --> Code :
+    #include<iostream>
+    #include<string>
+    using namespace std;
+    
+    int change(string str){
+        int count = 0;
+        for (int i=0;i<str.size();i++){
+            if (str[i] == 'a'|| str[i] == 'e'||str[i] == 'i'||str[i] == 'o'||str[i] == 'u'){
+                count ++;
+            }
+            else if (str[i] == 'A'|| str[i] == 'E'||str[i] == 'I'||str[i] == 'O'||str[i] == 'U'){
+                count ++;
+            }
+        }
+        return count;
+    }
+    
+    int main(){
+        string str;
+        cout << "Enter the string : ";
+        getline(cin , str);
+        cout << "Numbers of vovel in a string is : " << change(str) ;
+        return 0;
+    }
+
+
+***************************************************************************************************************************************************************************
+(5)Change upper to lower and also lower to upper:-
+  --> Code :
+    #include<iostream>
+    #include<string>
+    using namespace std;
+    
+    int main(){
+        string str;
+        cout << "Entre the string:";
+        getline (cin , str);
+        for (int i=0;i<str.size();i++){
+            if ('A' <=str[i] && str[i] <='Z'){
+                int x = str[i];
+                x = x + 32;
+                char ch = x;
+                str[i] = ch;
+            }
+            else if ('a' <=str[i] && str[i] <='z'){
+                int x = str[i];
+                x = x - 32;
+                char ch = x;
+                str[i] = ch;
+            }
+        }
+        cout << "Your changed string : ";
+        cout << str;
+        return 0;
+    }
