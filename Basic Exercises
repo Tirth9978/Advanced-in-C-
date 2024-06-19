@@ -1,0 +1,25 @@
+(1) Swap two numbers with pointers:
+  --> Code :
+    #include<iostream>
+    using namespace std;
+    
+    void swap(int *a,int *b){
+        int temp = *a;
+        *a = *b;
+        *b = temp;
+    }
+    
+    int main(){
+        int a = 1;
+        int b = 10;
+        cout << "Before swap:"<< endl;
+        cout << "a = "<< a << ",b = "<< b<< endl; 
+        swap(&a,&b);
+        cout << "After swap:"<< endl;
+        cout << "a = "<< a << ",b = "<< b; 
+        return 0;
+    }
+
+************************************************************************************************************************
+
+(2)Chake given character is alphbet ,digit or special:-
