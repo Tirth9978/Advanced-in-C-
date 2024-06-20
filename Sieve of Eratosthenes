@@ -51,3 +51,32 @@
         }
         return 0;
     }
+
+*************************************************************************************************************************************************************************
+(3) Sum of all prime numbers:-
+  --> Code :
+    #include<iostream>
+    using namespace std;
+    
+    int main (){
+        int n;
+        cout << "Enter the number:";
+        cin >> n;
+        int arr[n+1] = {0};
+        for (int i=2;i<=n;i++){
+            if (arr[i] == 0){
+                for (int j=i*i;j<=n;j+=i){
+                    arr[j] = 1;
+                }
+            }
+        }
+        int sum = 0;
+        for (int i=2;i<=n;i++){
+            if (arr[i] == 0){
+                sum += i;
+            }
+        }
+        cout << "sum of all prime numbers : "<< sum;
+        
+        return 0;
+    }
