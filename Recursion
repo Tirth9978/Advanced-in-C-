@@ -1,0 +1,98 @@
+(1) Find sum of n numbers:-
+  --> Code :
+    #include<iostream>
+    using namespace std;
+    
+    int sum(int n){
+        if (n == 1){
+            return 1;
+        }
+        return   n + sum(n-1);
+        
+    }
+    
+    int main(){
+        int n;
+        cout << "Entre the number:";
+        cin >> n;
+        cout << sum(n);
+        return 0;
+    }
+
+************************************************************************************************************************************************************************
+
+
+(2) Find n ^ p using recursion :-
+  -->Code :
+    #include<iostream>
+    using namespace std;
+    
+    int squere(int n,int p){
+        if (p == 1){
+            return n;
+        }
+        return n * squere(n,p-1);
+    }
+    
+    int main(){
+        int n;
+        int p;
+        cout << "for n ^ p "<< endl;
+        cout << "n = ";
+        cin >> n;
+        cout << "p = ";
+        cin >>p;
+        cout << squere(n,p);
+        return 0;
+    } 
+    
+    
+    ************************************************************************************************************************************************************************
+
+
+(3) Factriol of a number:-
+  -->code :
+    #include<iostream>
+    using namespace std;
+    
+    int fact(int n){
+        if (n == 0 || n == 1){
+            return 1;
+        }
+        return n * fact(n-1);
+    }
+    
+    int main(){
+        int n;
+        cout << "Entre the number :" ;
+        cin >>n;
+        cout << "Factrial : "<< fact(n);
+        return 0;
+    }
+        
+        
+************************************************************************************************************************************************************************
+
+
+(4)Print the nth fibonacci number: -
+  --> Code :
+    #include<iostream>
+    using namespace std;
+    
+    int fib(int n){
+        if ( n == 1){
+            return 1;
+        }
+        else if (n == 0){
+            return 0;
+        }
+        return fib(n-1) +fib(n-2);
+    }
+    
+    int main(){
+        int n;
+        cout << "Entre the number:";
+        cin >> n;
+        cout << "nth fib number:" << fib(n) ;
+        return 0;
+    }
