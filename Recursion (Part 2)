@@ -27,3 +27,67 @@
 
 
 ************************************************************************************************************************
+
+
+(2)Replace "pi" with 3.14:
+  --> Ex.:
+      pitirthpi    ===>   3.14tirth3.14
+  --> Method 1 :-
+     - Code : 
+        #include<iostream>
+        #include<string>
+        using namespace std;
+        
+        void change(string str,int i){
+            if (i == str.size()){
+                return ;
+            }
+            if (str[i] == 'p' && str[i+1] == 'i'){
+                str.erase(i,2);
+                str.insert(i,"3.14");
+                cout << str[i];
+                change(str,i+1);
+            }
+            else {
+                cout << str[i];
+                change(str,i+1);
+            }
+            
+            
+        }
+        
+        int main(){
+            string str;
+            cout <<"Enter the string:";
+            getline (cin ,str);
+            change(str,0);
+            return 0;
+        }
+                  -------------------------------X---------------------------------
+  --> Method 2:-
+    - Code :
+      #include<iostream>
+      #include<string>
+      using namespace std;
+      
+      void change (string str){
+          if (str.size() == 0){
+              return ;
+          }
+          if (str[0] == 'p' && str[1] == 'i'){
+              cout << "3.14";
+              change (str.substr(2));
+          }
+          else {
+              cout << str[0];
+              change (str.substr(1));
+          }
+      }
+      
+      int main(){
+          string str ;
+          cout <<"Enter the string: ";
+          getline(cin , str);
+          change (str);
+          return 0;
+      }
