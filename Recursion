@@ -261,3 +261,34 @@
         cout << "Maximum number : "<< max_1(arr,n,0,0);
         return 0;
     }
+
+
+************************************************************************************************************************************************************************
+(9)A recursive function to perform binary search in an array:-
+  --> Code : 
+    #include<iostream>
+    using namespace std;
+    
+    int index(int arr[],int i,int num,int n){
+        if (num == arr[i]){
+            return i;
+        }
+        int ans = index(arr,i+1,num,n);
+        return ans;
+    }
+    
+    int main(){
+        int n;
+        cout << "Entre the size of an array:";
+        cin >> n;
+        int arr[n];
+        for (int i=0;i<n;i++){
+            cout << "Entre the number:";
+            cin >> arr[i];
+        }
+        int num;
+        cout << "Entre the number to find its index:";
+        cin >> num;
+        cout << "Index of a number: "<< index(arr,0,num,n);
+        return 0;
+    }
