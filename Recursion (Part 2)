@@ -91,3 +91,41 @@
           change (str);
           return 0;
       }
+
+
+
+************************************************************************************************************************
+
+
+
+(3)Remove duplicates from string:-
+  --> Code :
+      #include<iostream>
+      #include <string>
+      using namespace std;
+      
+      void remove_1(string& str, int i) {
+          if (i >= str.size()-1) {
+              cout << str[i];
+              return;
+          }
+          char ch = str[i];
+          if (str[i+1] == ch) {
+              str.erase(i+1, 1);
+              remove_1(str, i);
+          } else {
+              cout << str[i];
+              remove_1(str, i+1);
+          }
+      }
+      
+      int main() {
+          string str;
+          cout << "Enter the string: ";
+          getline(cin, str);
+          remove_1(str, 0);
+          if (!str.empty()) {
+              cout << str.back();  
+          }
+          return 0;
+      }
