@@ -129,3 +129,39 @@
           }
           return 0;
       }
+
+
+************************************************************************************************************************
+
+
+(4)check if a string is a palindrome :-
+  --> Code : 
+    #include<iostream>
+    #include<string>
+    using namespace std;
+    
+    int chack(string str,int i,int j){
+        if (i == j){
+            return 1;
+        }
+        if (str[i] == str[j]){
+            int ans = chack(str,i+1,j-1);
+            return ans;
+        }
+        else {
+            return 0;
+        }
+    }
+    
+    int main(){
+        string str;
+        cout << "entre the number or string:";
+        getline (cin ,str);
+        if (chack(str,0,str.size()-1) == 1){
+            cout << "Palindrome";
+        }
+        else {
+            cout << "Non-Palindrome";
+        }
+        return 0;
+    }
