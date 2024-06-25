@@ -17,10 +17,9 @@
         cin >> n;
         cout << sum(n);
         return 0;
-    }
+}
 
 ************************************************************************************************************************************************************************
-
 
 (2) Find n ^ p using recursion :-
   -->Code :
@@ -185,5 +184,24 @@
 ************************************************************************************************************************************************************************
 
 
-(7)Find the first and last occurence of a number in given array:-
-  --> Code :
+(7) decimal To binary:-
+  --> Code : 
+    #include<iostream>
+    using namespace std;
+    
+    void binary(int num){
+        if (num == 0){
+            return ;
+        }
+        int rem = num % 2;
+        cout << rem;
+        binary(num / 2);
+    }
+    
+    int main(){
+        int num;
+        cout << "Entre the number:";
+        cin >> num;
+        binary(num);
+        return 0;
+    }
