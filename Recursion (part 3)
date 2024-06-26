@@ -1,0 +1,41 @@
+(1) Find all Recursion of a string : -
+  --> Code : 
+      #include<iostream>
+      #include<string>
+      using namespace std;
+      // For fact. 
+      int fact(int n){
+          if (n == 0 || n == 1){
+              return 1;
+          }
+          int ans = n * fact(n-1);
+          return ans;
+      }
+      
+      // permutations void function
+      
+      void permutations(string str,int i,int count,int n){
+          if (count == fact(n)){
+              return ;
+          }
+          if (i<n-1){
+              int temp = str[i];
+              str[i] = str[i+1];
+              str[i+1] = temp;
+              cout << str << endl;
+              permutations(str,i+1,count +1,n);
+          }
+          else {
+              permutations(str,0,count,n);
+          }
+      }
+      
+      // Main function
+      
+      int main(){
+          string str;
+          cout << "Entre the string:";
+          getline(cin , str);
+          permutations(str,0,0,str.size());
+          return 0;
+      }
