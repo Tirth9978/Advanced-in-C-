@@ -292,3 +292,36 @@
         cout << "Index of a number: "<< index(arr,0,num,n);
         return 0;
     }
+
+
+
+************************************************************************************************************************************************************************
+
+(10)Print all subarray of a main array:-
+  --> Code :
+    #include<iostream>
+    using namespace std;
+    
+    void subarray(int arr[],int n,int i){
+        if (i == n){
+            return ;
+        }
+        for (int j=i;j<n;j++){
+            cout << arr[j]<< "  " ;
+        }
+        cout << endl;
+        subarray(arr,n,i+1);
+    }
+    
+    int main(){
+        int n;
+        cout << "Entre the size of an array:";
+        cin >> n;
+        int arr[n];
+        for (int i=0;i<n;i++){
+            cout << "Entre the number:";
+            cin >> arr[i];
+        }
+        subarray(arr,n,0);
+        return 0;
+    }
