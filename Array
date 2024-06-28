@@ -474,7 +474,7 @@
               sum = 0;
               int j = 0;
               int k = i;
-              while (k != -1 ){
+              while (k != 0 ){
                   sum = sum + arr[j]*arr[k-1];
                   j++;k--;
               }
