@@ -206,3 +206,33 @@
         }
         return 0;
     }
+
+
+************************************************************************************************************************
+
+
+(11)Find nCr :-
+  --> Code : 
+    #include<iostream>
+    using namespace std;
+    
+    int nCr(int n,int r){
+        if (n < r){
+            return 0;
+        }
+        else if (n == r || r == 0){
+            return 1;
+        }
+        return nCr(n-1,r) + nCr(n-1,r-1);
+    }
+    
+    int main(void){
+        int n,r;
+        cout << "For nCr :\n";
+        cout << "n = ";
+        cin >> n;
+        cout << "r = ";
+        cin >> r;
+        cout << "nCr = "<< nCr(n,r);
+        return 0;
+    }
