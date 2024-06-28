@@ -39,3 +39,31 @@
           permutations(str,0,0,str.size());
           return 0;
       }
+
+
+
+---------------*-------------------*----------------------*---------------------*---------------------*-----------------
+
+(2) Towers of Hanoi:-
+  -->Code :
+    #include<iostream>
+    using namespace std;
+    
+    void towersofHanoi(int start,int end,char source,char aux,char destination){
+        if (start > end){
+            return ;
+        }
+        towersofHanoi(start,end-1,source,destination,aux);
+        cout << "Move disk "<< end << "from " << source<< "to "<< destination<< endl ; 
+        towersofHanoi(start,end-1,aux,source,destination);
+    }
+    
+    int main(){
+        int n;
+        cout << "Entre the numbers of disks:";
+        cin >>n;
+        towersofHanoi(1,n,'A','B','C');
+        return 0;
+    }
+
+---------------*-------------------*----------------------*---------------------*---------------------*-----------------
