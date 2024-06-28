@@ -454,3 +454,35 @@
         }
         return 0;
     }
+
+
+*************************************************************************************************************************************************************************
+(11) Print all Catalan numbers till n:-
+  --> Code :
+      #include<iostream>
+      using namespace std;
+      
+      int main(){
+          int n;
+          cout << "Entre the total number of turm:";
+          cin >> n;
+          int arr[n];
+          arr[0] = 1;
+          arr[1] = 1;
+          int sum = 0;
+          for (int i=2;i<n;i++){
+              sum = 0;
+              int j = 0;
+              int k = i;
+              while (k != -1 ){
+                  sum = sum + arr[j]*arr[k-1];
+                  j++;k--;
+              }
+              arr[i] = sum;
+          }
+          cout << "Catalan numbers till n:";
+          for (int i=0;i<n;i++){
+              cout << arr[i]<< "  ";
+          }
+          return 0;
+      }
