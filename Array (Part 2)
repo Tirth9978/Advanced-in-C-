@@ -1,0 +1,43 @@
+(1) Rearrange poritive and negative numbers in different arrays : -
+  --> Code:
+    #include<iostream>
+    using namespace std;
+    
+    int main(void){
+        int n;
+        cout << "Entre the size of an array:";
+        cin >>n;
+        int arr[n];
+        for (int i=0;i<n;i++){
+            cout << "Entre the number:";
+            cin >> arr[i];
+        }
+        int nagetive_number[n];
+        int positive_number[n];
+        int i=0;
+        int count_nagetive = 0;
+        int count_positive = 0;
+        while (i != n){
+            if ( arr[i] < 0 ){
+                nagetive_number[count_nagetive] = arr[i];
+                count_nagetive++;i++;
+            }
+            else if (arr[i] >= 0){
+                positive_number[count_positive] = arr[i];
+                count_positive++;i++;
+            }
+        }
+        cout << "Nagetive  array: ";
+        for (int i=0;i<count_nagetive;i++){
+            cout << nagetive_number[i]<< "  ";
+        }
+        cout << endl;
+        cout << "Positive array:";
+        for (int i=0;i<count_positive;i++){
+            cout << positive_number[i] << "  ";
+        }
+        return 0;
+    }
+
+
+---------------------*------------------------*-------------------------*---------------------------*---------------------------*-----------------------------------*----
