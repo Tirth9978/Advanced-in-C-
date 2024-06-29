@@ -77,3 +77,38 @@
     }
     
 ---------------------*------------------------*-------------------------*---------------------------*---------------------------*-----------------------------------*----
+
+(3)Rotate an array to the right by one position.:-
+  --> Code :-
+    #include<iostream>
+    using namespace std;
+    
+    int main(void){
+        int n;
+        cout << "Enter the size of an array:";
+        cin >> n;
+        int arr[n];
+        for (int i=0;i<n;i++){
+            cout << "Enter the number:";
+            cin >> arr[i];
+        }
+        int d;
+        cout <<"Enter the number of rotation:";
+        cin >>d;
+        for (int i=0;i<d;i++){
+            int temp = arr[n-1];
+            for (int j=n-1;j>=0;j--){
+                arr[j] = arr[j-1];
+                if (j == 0){
+                    arr[j] = temp;
+                }
+            }
+        }
+        
+        for (int i=0;i<n;i++){
+            cout << arr[i] << "  ";
+        }
+        return 0;
+    }
+
+---------------------*------------------------*-------------------------*---------------------------*---------------------------*-----------------------------------*----
