@@ -222,3 +222,37 @@
     }
 
 ---------------------*------------------------*-------------------------*---------------------------*---------------------------*-----------------------------------*----
+
+(7)Check if an array is sorted in ascending order:-
+  --> Code :
+    #include<iostream>
+    using namespace std;
+    
+    bool sort(int arr[],int n){
+        for (int i=0;i<n;i++){
+            for (int j=i;j<n;j++){
+                if (arr[i] > arr[j] && i != j){
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+    
+    int main (){
+        int n;
+        cout << "Enter the size of an array : ";
+        cin >> n;
+        int arr[n];
+        for (int i=0;i<n;i++){
+            cout << "Enter the number : ";
+            cin >> arr[i];
+        }
+        if (sort(arr,n) == true){
+            cout << "Array is sorted :)";
+        }
+        else {
+            cout << "Array is not sorted :(";
+        }
+        return 0;
+    }
