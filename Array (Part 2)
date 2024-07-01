@@ -187,3 +187,38 @@
     }
 
 ---------------------*------------------------*-------------------------*---------------------------*---------------------------*-----------------------------------*----
+
+
+(6) Find the least frequent element in an array.:-
+  -->Code :
+    #include<iostream>
+    using namespace std;
+    
+    int main (){
+        int n;
+        cout << "Enter the size of an array : ";
+        cin >> n;
+        int arr[n];
+        for (int i=0;i<n;i++){
+            cout << "Enter the number : ";
+            cin >> arr[i];
+        }
+        int ref = arr[0];
+        int count = 1;                                           //<-- Here count = 1 is main thing in this code 
+        for (int i=0;i<n;i++){
+            int ref_1 = arr[i];
+            int count_1 = 0;
+            for (int j=0;j<n;j++){
+                if (arr[i] == arr[j] && i != j){
+                    count_1++;
+                }
+            }
+            if (count > count_1){
+                ref = arr[i];
+            }
+        }
+        cout << "frequent element in an array is " << ref;
+        return 0;
+    }
+
+---------------------*------------------------*-------------------------*---------------------------*---------------------------*-----------------------------------*----
