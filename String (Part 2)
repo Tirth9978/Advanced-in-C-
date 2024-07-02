@@ -1,0 +1,31 @@
+(1) Write a program to replace a substring in a string:-
+  --> Code : 
+    #include<iostream>
+    #include<string>
+    using namespace std;
+    
+    int main (){
+        string str = "Rohan is from India";
+        cout << "Main string : " << str << endl;
+        string str_1,str_2;
+        cout << "Enter the string to replace : ";
+        getline (cin , str_1);
+        cout << "Enter the your string to add : ";
+        getline (cin , str_2);
+    
+        // Find function
+        int index = str.find(str_1);
+    
+        //erase function
+        str.erase(index,str_1.size());
+    
+        //insert function
+        str.insert(index,str_2);
+        
+        cout << str;
+        return 0;
+    }
+
+    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    (2)
