@@ -25,7 +25,44 @@
         cout << str;
         return 0;
     }
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-    -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-    (2)
+(2)Find if user enter string is substring or nor :-
+  --> Code : 
+    #include<iostream>
+    #include<string>
+    using namespace std;
+    
+    bool find (string str,string sub_str,int n){
+        int m = str.size();
+        int j = 0;
+        int count = 0;
+        for (int i=0;i<m;i++){
+            if (str[i] == sub_str[j]){
+                count ++;j++;
+            }
+        }
+        if (count == n){
+            return true ;
+        }
+        else {
+            return false ;
+        }
+    }
+    
+    int main (void){
+        string str = "SJFJIEFWIEFHNSABVB";
+        cout << str << endl;
+        string sub_str;
+        cout << "Enter the substring : ";
+        getline (cin , sub_str);
+        if (find(str,sub_str,sub_str.size()) == true ){
+            cout << "Yes";
+        }
+        else {
+            cout << "No";
+        }
+        return 0;
+    }
+      
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
