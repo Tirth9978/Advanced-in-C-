@@ -91,3 +91,29 @@
     }
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+(4)Find numbers of words in given string:-
+  --> Code :
+    #include<iostream>
+    #include<string>
+    using namespace std;
+    
+    int count (string str,int n){
+        int count_1 = 0;
+        for (int i=0;i<n;i++){
+            if (str[i] == ' '){
+                count_1 ++;
+            }
+        }
+        return count_1;
+    }
+    
+    int main (void){
+        string str;
+        cout << "Enter the string : ";
+        getline (cin , str);
+        cout << "Number of words in the string is " << count(str,str.size())+1;
+        return 0;
+    }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
