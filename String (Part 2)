@@ -66,3 +66,28 @@
     }
       
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+(3)Split string with whitespaces :- 
+  --> Code :
+    #include<iostream>
+    #include<string >
+    using namespace std;
+    
+    string split(string str,int n){
+        while (true){
+            if (n == 0){
+                return str;
+            }
+            str.insert(n," ");
+            n --;
+        }
+    }
+    
+    int main (){
+        string str ;
+        cout << "Entre the string : ";
+        getline(cin , str);
+        cout << split(str,str.size()-1);
+        return 0;
+    }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
