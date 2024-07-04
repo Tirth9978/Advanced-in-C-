@@ -264,34 +264,39 @@
 
 
 ************************************************************************************************************************************************************************
-(9)A recursive function to perform binary search in an array:-
+(9)Find the index of given number from array :-
   --> Code : 
     #include<iostream>
     using namespace std;
     
-    int index(int arr[],int i,int num,int n){
-        if (num == arr[i]){
+    int inedx_1(int arr[],int num,int i){
+        if (arr[i] == num){
             return i;
         }
-        int ans = index(arr,i+1,num,n);
-        return ans;
+        else if (i >= 7){
+            return -1;
+        }
+        return inedx_1(arr,num,i+1); 
     }
     
-    int main(){
-        int n;
-        cout << "Entre the size of an array:";
-        cin >> n;
-        int arr[n];
-        for (int i=0;i<n;i++){
-            cout << "Entre the number:";
-            cin >> arr[i];
+    int main (){
+        int arr[] = {1,5,3,7,8,4,9};
+        cout << "Array :  ";
+        for (int i=0;i<7;i++){
+            cout << arr[i] << "  ";
         }
         int num;
-        cout << "Entre the number to find its index:";
+        cout << endl << "Enter the number to find their index : ";
         cin >> num;
-        cout << "Index of a number: "<< index(arr,0,num,n);
+        if (inedx_1(arr,num,0) != -1){
+            cout << "Index of a given number is " << inedx_1(arr,num,0);
+        }
+        else {
+            cout << "Element not found :(";
+        }
         return 0;
     }
+
 
 
 
