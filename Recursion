@@ -246,7 +246,7 @@
         if (arr[i] > max){
             max = arr[i];
         }
-        max_1(arr,n,max,i+1);
+        return (max_1(arr,n,max,i+1));
     }
     
     int main(){
