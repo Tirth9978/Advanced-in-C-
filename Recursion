@@ -307,27 +307,30 @@
     #include<iostream>
     using namespace std;
     
-    void subarray(int arr[],int n,int i){
-        if (i == n){
+    void subarr(int arr[],int n,int j,int k){
+        if (j == n){
             return ;
         }
-        for (int j=i;j<n;j++){
-            cout << arr[j]<< "  " ;
+        for (int i=j;i<k;i++){
+            cout << arr[i] << "  ";
+        }cout << endl;
+        if (k != j){
+            subarr(arr,n,j,k-1);
+        }else {
+            subarr(arr,n,j+1,n);
         }
-        cout << endl;
-        subarray(arr,n,i+1);
     }
     
-    int main(){
+    int main (void){
         int n;
-        cout << "Entre the size of an array:";
+        cout << "Enter the size of an array : ";
         cin >> n;
         int arr[n];
         for (int i=0;i<n;i++){
-            cout << "Entre the number:";
+            cout << "Enter the number : ";
             cin >> arr[i];
         }
-        subarray(arr,n,0);
+        subarr(arr,n,0,n);
         return 0;
     }
 
