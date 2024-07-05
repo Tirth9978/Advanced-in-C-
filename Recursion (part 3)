@@ -68,7 +68,7 @@
 
 ---------------*-------------------*----------------------*---------------------*---------------------*-----------------
 
-(3) Find all subarray of a main string :-
+(3) Find all substring of a main string :-
   --> Code : 
     #include<iostream>
     #include<string>
