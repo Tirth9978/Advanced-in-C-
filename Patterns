@@ -190,25 +190,41 @@
     4   3   2   1   
     5   4   3   2   1  
   -->Code : 
-    #include<iostream>
-    using namespace std;
-    
-    int main(){
-        int n;
-        int count = 0;
-        cout << "Enter the numbere : ";
-        cin >> n;
-        for (int i=1;i<=n;i++){
-            count = i ;
-            for (int j=1;j<=i;j++){
-                cout << count << "   ";
-                count --;
-            }cout << endl;
+    -->Method 1:
+        #include<iostream>
+        using namespace std;
+        
+        int main(){
+            int n;
+            int count = 0;
+            cout << "Enter the numbere : ";
+            cin >> n;
+            for (int i=1;i<=n;i++){
+                count = i ;
+                for (int j=1;j<=i;j++){
+                    cout << count << "   ";
+                    count --;
+                }cout << endl;
+            }
+            return 0;
         }
-        return 0;
-    }
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    -->Method 2 : 
+        #include<iostream>
+        using namespace std;
+        
+        int main(void){
+            int n;
+            cout << "Enter the number : ";
+            cin >> n;
+            for (int i=1;i<=n;i++){
+                for (int j=i;j>=1;j--){
+                    cout << j <<  " ";
+                }cout << endl;
+            }
+            return 0;
+        }
+  
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 (9) Pattern 9 : 
   -->Ex : 
